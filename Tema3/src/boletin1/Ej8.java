@@ -11,13 +11,17 @@ public class Ej8 {
 		int n=0;
 		Scanner sc = new Scanner(System.in);
 		for (int i=0;i<numeros.length;i++) {
-			numeros[i]=(int) (Math.random()*100+1);
+			numeros[i]=(int) (Math.random()*10+1);
 		}
 		do {
 		System.out.println("Dame una posicion del 1 al 100");
 		n=sc.nextInt();
 		}while(!(n>0&&n<100));
-		System.out.println("Tu numero es "+numeros[n]);
+		for (int i=0;i<numeros.length;i++) {
+			if (numeros[i]==n) {
+				System.out.println(i);
+			}
+		}
 	}
 
 }

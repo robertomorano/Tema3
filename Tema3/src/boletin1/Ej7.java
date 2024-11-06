@@ -16,8 +16,8 @@ public class Ej7 {
 			numeros[i]=sc.nextInt();
 		}
 		for(int i:numeros) {
-			System.out.println("Mes "+i);
-			for (int j = 0;j<LONGITUDBARRA;j++){
+			System.out.println("Mes: ");
+			for (int j = 0;j<i ;j++){
 				System.out.print("-");
 			}
 			System.out.println();
