@@ -4,7 +4,7 @@ public class Ej5 {
 
 	public static void main(String[] args) {
 		//Crear e inicializar la tabla
-		int matriz[][]= new int[5][6];
+		int matriz[][]= new int[5][5];
 		int suma=0;
 		//Variable para guardar la suma total
 		int sumaTotal=0;
@@ -20,8 +20,8 @@ public class Ej5 {
 			}
 			System.out.println(suma);
 			System.out.print("");
+			suma=0;
 		}
-		suma=0;
 		//Recorrer columnas primero y solo mosttrar la suma al final de cada columna
 		for(int i=0; i<matriz[0].length;i++) {
 			for(int j =0;j<matriz.length;j++) {
@@ -29,7 +29,9 @@ public class Ej5 {
 				suma+=matriz[j][i];
 				sumaTotal+=suma;
 			}
-			System.out.println("");
+			System.out.print(suma);
+			System.out.print("\t");
+			suma=0;
 		}
 		System.out.print(sumaTotal/2);
 	}
