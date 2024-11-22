@@ -13,7 +13,6 @@ public class Ej4_2 {
 	static boolean esMagica(int t[][]) {
 		boolean simetrica = true;
 		int i = 0;
-		int j = 0;
 		// funcion para ver la suma primera
 		int sum = suma(t, 0);
 		while (i < t.length && simetrica) {

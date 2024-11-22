@@ -11,16 +11,20 @@ public class Ej6 {
 		int longitud = 0;
 		// frecuencia de suma
 		int frecuencia;
+		
 		// Pedir longitud
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce una longitud");
 		longitud = sc.nextInt();
 		matriz = new int[longitud];
+		
 		matriz = generar(matriz);
+		
 		// Pedir frecuencia de suma
 		System.out.println("Introduce el rango de suma");
 		frecuencia = sc.nextInt();
 		matriz = suma(matriz, frecuencia);
+		
 		System.out.println("Se ha encontrado en: " + Arrays.toString(matriz));
 	}
 
