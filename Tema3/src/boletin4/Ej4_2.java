@@ -17,7 +17,7 @@ public class Ej4_2 {
 		int sum = suma(t, 0);
 		while (i < t.length && simetrica) {
 			// llamamos a la funcion otra vez para comprobar que la siguiente sea igual
-			if (sum == suma(t, i)) {
+			if (sum == suma(t, i)&&sum == sumaInv(t, i)) {
 				i++;
 			} else {
 				simetrica = false;
@@ -31,6 +31,15 @@ public class Ej4_2 {
 		for (int j = 0; j < t[i].length; j++) {
 			suma += t[i][j];
 		}
+		
+		return suma;
+	}
+	static int sumaInv(int t[][], int i) {
+		int suma = 0;
+		for (int j = 0; j < t[i].length; j++) {
+			suma += t[j][i];
+		}
+		
 		return suma;
 	}
 }

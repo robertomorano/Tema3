@@ -39,7 +39,7 @@ public class Ej2 {
 		//Varibae para guardar el valor anterior
 		int x=0;
 		for(int i=0;i<=(int)(t.length/2);i++) {
-			posicion = (int) (Math.random() * (t.length/2)+(t.length/2));
+			posicion = (int) (Math.random() * (t.length));
 			x=t[i];
 			t[i]=t[posicion];
 			t[posicion]=x;
