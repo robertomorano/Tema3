@@ -147,16 +147,20 @@ public class Ej4 {
 			}
 		return movimiento;
 	}
-	static int[][] caballo(int posX, int posY, char pieza){
+	static int[][] caballo(int posX, int posY, char pieza) {
 		int movimiento[][] = new int[8][8];
 		movimiento[posX][posY] = 2;
-		int sumaMovX= posX+2;
-		int sumaMovY= posY+1;
-		//recorre con un for la suma de las posiciones de -2 a 2 sin pasar por 0
-		for(int)
-			for(int)
-		if(sumaMovX<movimiento.length&&sumaMovY<movimiento.length)
-			movimiento[sumaMovX][sumaMovY]=1;
+
+		// recorre con un for la suma de las posiciones de -2 a 2 sin pasar por 0
+		for (int i = -2; i <= 2; i += 4) {
+			for (int j = -1; j <= 1; j += 2) {
+				if (posX + i < movimiento.length && posY + j < movimiento.length && posX + i >= 0 && posY + j >= 0) {
+					movimiento[posX + i][posY + j] = 1;
+					}
+					if (posX + j >= 0 && posY + i >= 0 && posX + j < movimiento.length && posY + i < movimiento.length)
+						movimiento[posX + j][posY + i] = 1;
+				}
+			}
 		return movimiento;
 	}
 }
