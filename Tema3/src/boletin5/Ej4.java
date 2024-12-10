@@ -31,10 +31,9 @@ public class Ej4 {
 		case 'D':
 			matriz = reina(posX, posY, pieza);
 			break;
-		case 'C':
-			break;
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + pieza);
+			matriz = caballo(posX, posY, pieza);
+			break;
 		}
 		imprimir(posX, posY, matriz, pieza);
 	}
