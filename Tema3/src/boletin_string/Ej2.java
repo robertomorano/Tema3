@@ -19,7 +19,7 @@ public class Ej2 {
 		comparar(contrasena, intento);
 
 		while (!contrasena.equals(intento)) {
-			for (int i = 0; i < contrasena.length(); i++) {
+			for (int i = 0; i < intento.length(); i++) {
 				if (intento.charAt(i) == contrasena.charAt(i)) {
 					contar += intento.charAt(i);
 				} else {
@@ -29,8 +29,8 @@ public class Ej2 {
 			System.out.println(contar);
 //			System.out.println(intento);
 //			System.out.println(contrasena);
-			intento="";
-			contar="";
+			intento = "";
+			contar = "";
 			System.out.println("Introduce una frase");
 			intento = sc.nextLine();
 			comparar(contrasena, intento);
@@ -40,21 +40,27 @@ public class Ej2 {
 	}
 
 	static String adValor(String cadena, int valor) {
+		String cadenaAum = cadena;
 		for (int i = 0; i < valor; i++) {
-			cadena += "*";
+			cadenaAum=  cadenaAum +"*";
 		}
-		return cadena;
+		System.out.println(cadenaAum.length());
+		return cadenaAum;
 	}
+
 	static void comparar(String contrasena, String intento) {
-		int valor=0;
+		int valor = 0;
 		if (intento.length() > contrasena.length()) {
-			valor = intento.length() - contrasena.length();
-			intento = adValor(intento, valor);
+			//Desde el inicio hasta el valor donde llegue
+			intento = intento.substring(0, contrasena.length());
+			
 		} else {
 			valor = contrasena.length() - intento.length();
-			contrasena = adValor(contrasena, valor);
+			System.out.println(valor);
+			System.out.println(intento.length());
+			intento = adValor(intento, valor);
 		}
-		
+
 	}
 
 }
