@@ -6,10 +6,11 @@ public class Ej6 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String frase1 = "";
+		//No deberia cambiar el valor de la frase original
+		frase1 = frase1.replace(" ", "");
 		boolean palindroma = false;
 		System.out.println("Introduce una frase");
 		frase1 = sc.nextLine();
-		frase1.replace(" ", "");
 		palindroma = palindromo(frase1);
 		System.out.println("Es " + palindroma);
 	}
@@ -24,6 +25,7 @@ public class Ej6 {
 
 	static boolean palindromo(String cadena) {
 		String fraseInv = "";
+		
 		boolean palindroma = true;
 		fraseInv = invertir(cadena);
 		System.out.println(fraseInv);

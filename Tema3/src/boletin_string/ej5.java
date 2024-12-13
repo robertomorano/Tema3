@@ -12,6 +12,7 @@ public class ej5 {
 		int idiceFin = 0;
 		System.out.println("Introduce una frase");
 		frase1 = sc.nextLine();
+		
 
 //		frase1=invertir(frase1);
 //		System.out.println("La frase "+ frase1 + " la invertida");
