@@ -75,7 +75,8 @@ public class ExArrStr {
 		boolean es = false;
 		// Array para guardar los valores para el abecedario
 		char[] letras = codigo.toCharArray();
-		if (abcedario[letras[0]][letras[1]] == letra) {
+		
+		if (abcedario[letras[0]-'0'][letras[1]-'0'] == letra) {
 			es = true;
 			fraseCodificada = fraseCodificada.replace(codigo, String.valueOf(letra));
 		}
