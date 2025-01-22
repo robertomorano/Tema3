@@ -17,18 +17,22 @@ public class ExArrStr {
 		Scanner sc = new Scanner(System.in);
 		String codigo = "";
 		char letra;
+		
 		desordenaAbecedario();
 		System.out.println(Arrays.deepToString(abcedario));
+		
 		eligeFrase();
 		System.out.println(fraseReal);
+		
 		codificaFrase();
 		System.out.println(fraseCodificada);
+		
 		while (!sonIguales()) {
 			System.out.println("Dame el codifo");
-			codigo=sc.next();
+			codigo = sc.next();
 			System.out.println("Dame la letra");
-			letra= sc.next().charAt(0);
-			if(compruebaCodigo(letra, codigo)) {
+			letra = sc.next().charAt(0);
+			if (compruebaCodigo(letra, codigo)) {
 				System.out.println(fraseCodificada);
 			}
 		}
@@ -74,8 +78,15 @@ public class ExArrStr {
 	static boolean compruebaCodigo(char letra, String codigo) {
 		boolean es = false;
 		// Array para guardar los valores para el abecedario
-		char[] letras = codigo.toCharArray();
-		if (abcedario[letras[0]][letras[1]] == letra) {
+		String[] letras = codigo.split("");
+		char[] letrasChar = new char[2];
+		for (String letra1 : letras) {
+			 int i=0;
+			 letrasChar[i] = letra1.charAt(0);
+			 i++;
+			}
+		System.out.println(String.valueOf(letras));
+		if (abcedario[(letrasChar[0]-'0')][(letrasChar[1]-'0')] == letra) {
 			es = true;
 			fraseCodificada = fraseCodificada.replace(codigo, String.valueOf(letra));
 		}
