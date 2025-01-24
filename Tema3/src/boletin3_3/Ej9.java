@@ -23,7 +23,7 @@ public class Ej9 {
 				numeros.put(clave, 1);
 			}
 		}
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < 2; i++) {
 			System.out.println("Dame las estrellas");
 			clave = sc.nextInt();
 			if (estrellas.get(clave) != null) {
@@ -33,6 +33,8 @@ public class Ej9 {
 				estrellas.put(clave, 1);
 			}
 		}
+		System.out.println(numeros + " blablabla " +estrellas);
+		
 	}
 
 }
