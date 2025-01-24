@@ -78,6 +78,7 @@ public class ExArrStr {
 	static boolean compruebaCodigo(char letra, String codigo) {
 		boolean es = false;
 		// Array para guardar los valores para el abecedario
+<<<<<<< HEAD
 		String[] letras = codigo.split("");
 		char[] letrasChar = new char[2];
 		for (String letra1 : letras) {
@@ -87,6 +88,11 @@ public class ExArrStr {
 			}
 		System.out.println(String.valueOf(letras));
 		if (abcedario[(letrasChar[0]-'0')][(letrasChar[1]-'0')] == letra) {
+=======
+		char[] letras = codigo.toCharArray();
+		
+		if (abcedario[letras[0]-'0'][letras[1]-'0'] == letra) {
+>>>>>>> branch 'master' of https://github.com/robertomorano/Tema3.git
 			es = true;
 			fraseCodificada = fraseCodificada.replace(codigo, String.valueOf(letra));
 		}
